@@ -1,0 +1,61 @@
+const EVENT_OPTIONS = {bubbles: true, cancelable: false, composed: true};
+const EVENTS = {
+    INPUT: new Event("input", EVENT_OPTIONS), 
+}; 
+
+/**
+ * /  (Note, this code follows the terminology from  github.com/astrezhnev/conjointsdt)
+ * Task = Set of choices presented to respondent in a single screen
+ * Profile = Single list of attributes in a given task
+ * Attribute = Category characterized by a set of levels
+ * Level = Value that an attribute can take in a particular choice task - not needed here.
+ */
+
+/// JUST CHANGE CONJOINT INFO BELOW HERE
+let ct;
+ct = 5; /// ENTER NUMBER OF TASKS
+let pt;
+pt = 2; /// ENTER NUMBER OF PROFILES PER TASK
+let na;
+na = 8; /// ENTER NUMBER OF ATTRIBUTES THAT ARE USED IN ANY TASK
+/// NO NEED TO CHANGE ANYTHING UNDERNEATH THIS POINT :)
+
+
+let f_max = ct * na; // gives the number of fields you need for the first row
+let d_max = ct * na * pt; // gives you number of attribute level fields you need to create
+
+// for the attribute order
+for (let f = 1; f <= f_max  ; f++) {
+    let i = Math.ceil(f / na);
+    let j = (f % na);
+    if (j === 0) {
+        j = na;
+    }
+    console.log("F-" + i + "-" + j );
+
+    document.getElementsByClassName("EDPart SetValueButton")[f].click();
+    const inputElement = document.querySelector(".inlineEditor");
+    inputElement.value = "F-" + i + "-" + j;
+    inputElement.dispatchEvent(EVENTS.INPUT);
+}
+
+
+// for the attribute values displayed
+for (let d = 1; d <= d_max; d++) {
+    let i = Math.ceil(d / (2*na));
+    let j = Math.ceil((d % (2*na)) / na);
+    let g = (d % na);
+    if (j === 0) {
+        j = pt;
+    }
+    if (g === 0) {
+        g = na;
+    }
+    console.log("F-" + i + "-" + j + "-" + g);
+
+
+    document.getElementsByClassName("EDPart SetValueButton")[f_max + d].click();
+    const inputElement = document.querySelector(".inlineEditor");
+    inputElement.value = "F-" + i + "-" + j + "-" + g;
+    inputElement.dispatchEvent(EVENTS.INPUT);
+}
