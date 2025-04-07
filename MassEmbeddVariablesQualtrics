@@ -1,3 +1,11 @@
+/** 
+*/ Inspired by this comment, https://github.com/astrezhnev/conjointsdt/issues/5#issue-2146142409, I provide an updated script for conjoint experiments 
+* embedded with github.com/astrezhnev/conjointsdt in Qualtrics.
+* As you always need to set many Embedded Variables in Qualtrics, in the survey flow, based on only 3 inputs. 
+* Run it in console in your browser in the survey flow. 
+*/
+
+/// setup 
 const EVENT_OPTIONS = {bubbles: true, cancelable: false, composed: true};
 const EVENTS = {
     INPUT: new Event("input", EVENT_OPTIONS), 
@@ -17,8 +25,8 @@ ct = 5; /// ENTER NUMBER OF TASKS
 let pt;
 pt = 2; /// ENTER NUMBER OF PROFILES PER TASK
 let na;
-na = 8; /// ENTER NUMBER OF ATTRIBUTES THAT ARE USED IN ANY TASK
-/// NO NEED TO CHANGE ANYTHING UNDERNEATH THIS POINT :)
+na = 6; /// ENTER NUMBER OF ATTRIBUTES THAT ARE USED IN ANY TASK
+/// NO NEED TO CHANGE ANYTHING IN THE CODE UNDERNEATH THIS POINT :)
 
 
 let f_max = ct * na; // gives the number of fields you need for the first row
@@ -52,7 +60,6 @@ for (let d = 1; d <= d_max; d++) {
         g = na;
     }
     console.log("F-" + i + "-" + j + "-" + g);
-
 
     document.getElementsByClassName("EDPart SetValueButton")[f_max + d].click();
     const inputElement = document.querySelector(".inlineEditor");
