@@ -7,4 +7,7 @@ You only provide 3 inputs, the number of tasks (how many repetitions), number of
 
 Much of the code can also be adapted for other uploads of embedded data to the Qualtrics survey flow. 
 
+## Qualtrics-CSS-use-question-in-landscape-mode-GB 
+This [file](Qualtrics-CSS-use-question-in-landscape-mode-GB.html) contains css can be included in qualtrics conjoint table questions as html code to notify users that these questions should be viewed in landscape view on mobile devices. It supports multiple languages, therefore, make sure to also include the code in all the translations. 
+
 ## More to follow :) 
