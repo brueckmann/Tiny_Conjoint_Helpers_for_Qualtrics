@@ -1,0 +1,68 @@
+<!-- ADD THIS TO ALL QUESTIONS YOU ONLY WANT IN LANDSCAPE VIEW -->
+<style>
+.turnWarn {
+  display: none;
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  /* SAME STYLE  */
+  .turnWarn {
+    padding: 15px;
+    margin-bottom: 25px;
+    color: white;
+    background-color: #2196F3;
+    opacity: 1;
+  }
+  
+  /* DO NOT SHOW THE REST */
+  .QuestionBody {
+    display: none;
+  }
+  .UserTable {
+    display: none; /* This only for the HTML Tables. */
+  }
+  #NextButton {
+    display: none;
+  }
+  
+  /* DEFAULT IS NO WARNING */
+  .turnWarn {
+    display: none;
+  }
+  
+  /* Only warning in current language */
+  .turnWarn[data-lang="${e://Field/Q_Language}"] {
+    display: block;
+  }
+  
+  /* Fallback: If language not found, display english warning*/
+  .turnWarn[data-lang="EN"] {
+    display: block;
+  }
+  
+  /* Do not show english, if another warning is displayed */
+  .turnWarn:not([data-lang="EN"]):not([data-lang="${e://Field/Q_Language}"]) ~ .turnWarn[data-lang="EN"] {
+    display: none;
+  }
+}
+</style>
+
+<!-- Englisch -->
+<div class="turnWarn" data-lang="EN">
+  <strong>PLEASE TURN</strong> your device to <strong>LANDSCAPE</strong> mode to view this question!
+</div>
+
+<!-- German -->
+<div class="turnWarn" data-lang="DE">
+  <strong>BITTE DREHEN</strong> Sie Ihr Gerät ins <strong>QUERFORMAT</strong> um diese Frage zu beantworten!
+</div>
+
+<!-- French -->
+<div class="turnWarn" data-lang="FR">
+  <strong>VEUILLEZ TOURNER</strong> votre appareil en orientation <strong>PAYSAGE</strong> pour voir cette question !
+</div>
+
+<!-- Italian -->
+<div class="turnWarn" data-lang="IT">
+  <strong>PER FAVORE, RUOTA</strong> il tuo dispositivo all'orientamento <strong>ORIZZONTALE</strong> per vedere questa domanda!
+</div>
