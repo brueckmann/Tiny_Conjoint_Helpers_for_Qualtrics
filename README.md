@@ -1,6 +1,6 @@
 # Tiny Conjoint Helpers for Qualtrics
 
-A (very loose)  collection of some helpers for performing conjoint choice experiments in qualtrics surveys.
+A (very loose) collection of some helpers for performing conjoint choice experiments in qualtrics surveys.
 
 ## Tables must be viewed in Landscape on Mobile
 
@@ -11,6 +11,8 @@ To achieve that the conjoint tables have to be viewed in landscape format for re
 [![Preview on mobile in landscape mode](Screenshot_mobile_landscape_format.png)](https://github.com/brueckmann/Tiny_Conjoint_Helpers_for_Qualtrics/blob/main/Screenshot_mobile_landscape_format.png)
 
 1.  Define all conjoint tables as `<table class="UserTable">`, as you can see in [HTML_Conjointtable.html](https://github.com/brueckmann/Tiny_Conjoint_Helpers_for_Qualtrics/blob/main/HTML_Conjointtable.html).
+
+    -   To include the turn warning (in 1 language only!), use the code in HTML_Conjointtablewith_turnwarn as exemplified in this survey: <https://unibe.eu.qualtrics.com/jfe8/preview/previewId/49fb0ca6-422c-450e-a168-a6540e9eab04/SV_3mERahTtwCYstLw?Q_CHL=preview&Q_SurveyVersionID=current>
 
 2.  In qualtrics, the *Look & Feel*, under *Style*, add a *Custom CSV* (as explained in this [Screenshot](https://github.com/brueckmann/Tiny_Conjoint_Helpers_for_Qualtrics/blob/main/Screenshot_how_to_add_css_in_qualtrics_look_and_feel.png "View Screenshot")) and define the behavio(u)r of `UserTable`, as provided in [CSS_for_conjoint_tables.css](https://github.com/brueckmann/Tiny_Conjoint_Helpers_for_Qualtrics/blob/main/CSS_for_conjoint_tables.css).
 

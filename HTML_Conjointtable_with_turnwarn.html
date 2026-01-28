@@ -1,0 +1,124 @@
+<!-- Conjoint Table 1 of X -->
+<span>Comparison&nbsp;1 (of X)</span>
+<br><br>
+<span>Please carefully review the proposals detailed below, then please answer the questions.</span>
+<br>
+<div>
+<br>
+<table class="UserTable">
+<tbody>
+<tr>
+<td><br></td> 
+<td width="33.5%" style="text-align: center;">
+<strong>Proposal A</strong></td>
+<td width="33.5%" style="text-align: center;">
+<strong>Proposal B</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>${e://Field/F-1-1}</strong></td>
+<td style="text-align: center;">${e://Field/F-1-1-1}</td>
+<td style="text-align: center;">${e://Field/F-1-2-1}</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>${e://Field/F-1-2}</strong></td>
+<td style="text-align: center;">${e://Field/F-1-1-2}</td>
+<td style="text-align: center;">${e://Field/F-1-2-2}</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>${e://Field/F-1-3}</strong></td>
+<td style="text-align: center;">${e://Field/F-1-1-3}</td>
+<td style="text-align: center;">${e://Field/F-1-2-3}</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>${e://Field/F-1-4}</strong></td>
+<td style="text-align: center;">${e://Field/F-1-1-4}</td>
+<td style="text-align: center;">${e://Field/F-1-2-4}</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>${e://Field/F-1-5}</strong></td>
+<td style="text-align: center;">${e://Field/F-1-1-5}</td>
+<td style="text-align: center;">${e://Field/F-1-2-5}</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>${e://Field/F-1-6}</strong></td>
+<td style="text-align: center;">${e://Field/F-1-1-6}</td>
+<td style="text-align: center;">${e://Field/F-1-2-6}</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>${e://Field/F-1-7}</strong></td>
+<td style="text-align: center;">${e://Field/F-1-1-7}</td>
+<td style="text-align: center;">${e://Field/F-1-2-7}</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>${e://Field/F-1-8}</strong></td>
+<td style="text-align: center;">${e://Field/F-1-1-8}</td>
+<td style="text-align: center;">${e://Field/F-1-2-8}</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- Landscape Orientation Warning -->
+<style>
+/* Hide warning by default */
+.turnWarn {
+  display: none;
+}
+
+/* Media query: Only applies to mobile devices in PORTRAIT mode with screen width <= 600px */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  
+  /* Show the warning message - blue alert box */
+  .turnWarn {
+    display: block;
+    padding: 15px;
+    margin-bottom: 25px;
+    color: white;
+    background-color: #2196F3;
+    opacity: 1;
+  }
+  
+  /* Hide the main question content when in portrait mode */
+  .QuestionBody {
+    display: none;
+  }
+  
+  /* Hide the conjoint table when in portrait mode */
+  .UserTable {
+    display: none;
+  }
+  
+  /* Hide the Next button when in portrait mode */
+  #NextButton {
+    display: none;
+  }
+}
+
+/* Media query: Mobile devices in LANDSCAPE mode - show table, hide warning */
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  /* Show the table in landscape mode */
+  .UserTable {
+    display: table;
+  }
+  
+  /* Show the question body in landscape mode */
+  .QuestionBody {
+    display: block;
+  }
+  
+  /* Show the Next button in landscape mode */
+  #NextButton {
+    display: block;
+  }
+  
+  /* Keep warning hidden in landscape mode */
+  .turnWarn {
+    display: none !important;
+  }
+}
+</style>
+
+<!-- Warning message -->
+<div class="turnWarn">
+  <strong>PLEASE TURN</strong> your device to <strong>LANDSCAPE</strong> mode to view this question!
+</div>
