@@ -1,0 +1,82 @@
+.Skin .QuestionText .UserTable td, .Skin .QuestionText .UserTable th
+               {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+                padding: 1.5vw;
+                text-align: center;
+                overflow-wrap: break-word;
+                hyphens: auto;
+               }
+
+@media only screen and (max-width: 600px)
+ {   
+     .Skin .QuestionText  .UserTable 
+               {
+                width: 100%;
+                table-layout: fixed;
+                border: 1px solid black;
+                border-collapse: collapse;
+                font-size: 20px;
+                margin: auto;
+                }
+     .Skin .QuestionText .UserTable td, .Skin .QuestionText .UserTable th
+               {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+                padding: 1vw;
+                text-align: center;
+                overflow-wrap: break-word;
+                hyphens: auto;
+               }
+ }
+
+
+@media screen and (min-width: 1200px) {
+	.Skin .QuestionOuter.Matrix{
+	min-width: 90% !important;
+    max-width: 95% !important;
+    margin: 0 auto !important;  /* This will center it */
+	}
+	.Skin .SkinInner{
+	min-width: 85% !important;
+	max-width: 90% !important;
+	margin: 0 auto !important;  /* This will center it */
+	}
+/* Expand matrix to full width */
+	.Skin .Matrix{
+	min-width: 90% !important;
+    max-width: 95% !important;
+    margin: 0 auto !important;  /* This will center it */
+	}
+/* Make matrix container use full width */
+	.Skin .QuestionBody{
+	min-width: 90% !important;
+    max-width: 95% !important;
+    margin: 0 auto !important;  /* This will center it */
+	}
+	.Skin .QuestionText{ 
+	min-width: 90% !important;
+    max-width: 95% !important;
+    margin: 0 auto !important;  /* This will center it */
+    }
+
+
+.JFEScope .Skin .q-slider ul , .JFEScope .Skin .q-slider .n-a-container .answer{
+font-size: 22px;
+}
+
+
+.Skin .QuestionText .turnWarn{
+					display:none;
+					opacity: 1;
+					padding: 15px;
+					margin-bottom: 25px; 
+					color: white;
+					background-color: #2196F3;
+					}
+
+}
+
+
