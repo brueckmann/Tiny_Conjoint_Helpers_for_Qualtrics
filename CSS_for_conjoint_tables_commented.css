@@ -1,0 +1,96 @@
+/* ===== BASE STYLES (Applied to all screen sizes) ===== */
+
+/* Style all table cells (td) and header cells (th) within UserTable */
+.Skin .QuestionText .UserTable td, .Skin .QuestionText .UserTable th
+{
+    border: 1px solid black;           /* Add black border around each cell */
+    border-collapse: collapse;         /* Merge borders between adjacent cells */
+    text-align: center;                /* Center-align text horizontally */
+    padding: 1.5vw;                    /* Add responsive padding (1.5% of viewport width) */
+    text-align: center;                /* Redundant: center-align text (duplicate) */
+    overflow-wrap: break-word;         /* Allow long words to break and wrap to next line */
+    hyphens: auto;                     /* Automatically add hyphens when breaking words */
+}
+
+/* ===== MOBILE STYLES (Screens 600px and smaller) ===== */
+
+@media only screen and (max-width: 600px)
+{   
+    /* Style the UserTable for mobile devices */
+    .Skin .QuestionText .UserTable 
+    {
+        width: 100%;                   /* Make table full width of container */
+        table-layout: fixed;           /* Fixed table layout - equal column widths */
+        border: 1px solid black;       /* Black border around entire table */
+        border-collapse: collapse;     /* Merge borders between cells */
+        font-size: 20px;               /* Set font size to 20 pixels */
+        margin: auto;                  /* Center the table horizontally */
+    }
+    
+    /* Style table cells for mobile - similar to base but with less padding */
+    .Skin .QuestionText .UserTable td, .Skin .QuestionText .UserTable th
+    {
+        border: 1px solid black;       /* Black border around each cell */
+        border-collapse: collapse;     /* Merge borders between adjacent cells */
+        text-align: center;            /* Center-align text horizontally */
+        padding: 1vw;                  /* Reduced padding for mobile (1% of viewport width) */
+        text-align: center;            /* Redundant: center-align text (duplicate) */
+        overflow-wrap: break-word;     /* Allow long words to break and wrap */
+        hyphens: auto;                 /* Automatically add hyphens when breaking words */
+    }
+}
+
+/* ===== DESKTOP/LARGE SCREEN STYLES (Screens 1200px and wider) ===== */
+
+@media screen and (min-width: 1200px) {
+    
+    /* Expand the Matrix question container on large screens */
+    .Skin .QuestionOuter.Matrix{
+        min-width: 90% !important;     /* Minimum width of 90% of parent */
+        max-width: 95% !important;     /* Maximum width of 95% of parent */
+        margin: 0 auto !important;     /* Center horizontally (0 top/bottom, auto left/right) */
+    }
+    
+    /* Expand the inner skin container */
+    .Skin .SkinInner{
+        min-width: 85% !important;     /* Minimum width of 85% of parent */
+        max-width: 90% !important;     /* Maximum width of 90% of parent */
+        margin: 0 auto !important;     /* Center horizontally */
+    }
+    
+    /* Expand Matrix question to full width */
+    .Skin .Matrix{
+        min-width: 90% !important;     /* Minimum width of 90% of parent */
+        max-width: 95% !important;     /* Maximum width of 95% of parent */
+        margin: 0 auto !important;     /* Center horizontally */
+    }
+    
+    /* Make the question body container use nearly full width */
+    .Skin .QuestionBody{
+        min-width: 90% !important;     /* Minimum width of 90% of parent */
+        max-width: 95% !important;     /* Maximum width of 95% of parent */
+        margin: 0 auto !important;     /* Center horizontally */
+    }
+    
+    /* Expand the question text area */
+    .Skin .QuestionText{ 
+        min-width: 90% !important;     /* Minimum width of 90% of parent */
+        max-width: 95% !important;     /* Maximum width of 95% of parent */
+        margin: 0 auto !important;     /* Center horizontally */
+    }
+    
+    /* Increase font size for slider questions on large screens */
+    .JFEScope .Skin .q-slider ul, .JFEScope .Skin .q-slider .n-a-container .answer{
+        font-size: 22px;               /* Set font size to 22 pixels for better readability */
+    }
+    
+    /* Hide the "turn device" warning on large screens (desktop) */
+    .Skin .QuestionText .turnWarn{
+        display: none;                 /* Hide the warning completely */
+        opacity: 1;                    /* Full opacity (though display:none overrides this) */
+        padding: 15px;                 /* Padding around warning text */
+        margin-bottom: 25px;           /* Space below warning box */
+        color: white;                  /* White text color */
+        background-color: #2196F3;     /* Blue background color */
+    }
+}
